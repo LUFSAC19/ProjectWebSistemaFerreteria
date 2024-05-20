@@ -1,0 +1,61 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MDIPrincipal.master.vb" Inherits="ProjectWebSistemaFerreteria.MDIPrincipal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="main-content">
+            <header class="bg-primary text-white text-center py-2 mb-3">
+                SISTEMA FERRETERIA
+                
+            </header>
+            <div class="header-buttons text-center mb-3">
+                <asp:Button ID="btnSalir" runat="server" Text="Salir" CssClass="btn btn-danger mx-2" />
+                <asp:Button ID="btnCerrar" runat="server" Text="Cerrar" CssClass="btn btn-secondary mx-2" />
+                <asp:Button ID="btnAperturar" runat="server" Text="Aperturar" CssClass="btn btn-success mx-2" />
+                <asp:Button ID="btnVenta" runat="server" Text="Venta" CssClass="btn btn-info mx-2" />
+            </div>
+            <section class="container mt-4 ms-0">
+                <div class="row">
+                    <div class="col-3">
+                        <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#menuCollapse" aria-expanded="false" aria-controls="menuCollapse">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="collapse" id="menuCollapse">
+                            <div class="bg-light p-4">
+                                <ul class="list-unstyled">
+                                    <li><a href="CerrarSesion.aspx">Cerrar Sesión</a></li>
+                                    <li><a href="Empleado.aspx">Empleado</a></li>
+                                    <li><a href="TipoEmpleado.aspx">Tipo Empleado</a></li>
+                                    <li><a href="Cliente.aspx">Cliente</a></li>
+                                    <li><a href="Caja.aspx">Caja</a></li>
+                                    <li><a href="Usuario.aspx">Usuario</a></li>
+                                    <li><a href="Venta.aspx">Venta</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-9">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Bootstrap JS y dependencias -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </form>
+</body>
+</html>
