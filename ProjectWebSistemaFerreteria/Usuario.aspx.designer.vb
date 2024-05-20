@@ -11,16 +11,34 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Formulario_web1
+Partial Public Class Formulario_web15
 
     '''<summary>
-    '''Control txtCodigo.
+    '''Control txtId.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtCodigo As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtId As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtNombre.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtNombre As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtPassword.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control txtDni.
@@ -32,51 +50,6 @@ Partial Public Class Formulario_web1
     Protected WithEvents txtDni As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control DropDownList1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
-
-    '''<summary>
-    '''Control txtNombres.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtNombres As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control txtApellidos.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtApellidos As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control dtpFecha.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents dtpFecha As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control txtCelular.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtCelular As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''Control cbxSexo.
     '''</summary>
     '''<remarks>
@@ -84,33 +57,6 @@ Partial Public Class Formulario_web1
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents cbxSexo As Global.System.Web.UI.WebControls.DropDownList
-
-    '''<summary>
-    '''Control txtEmail.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control txtDireccion.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtDireccion As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control chbxVigente.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents chbxVigente As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
     '''Control btnGuardar.
@@ -167,11 +113,11 @@ Partial Public Class Formulario_web1
     Protected WithEvents btnSalir As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control dgvEmpleado.
+    '''Control dgvUsuarios.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents dgvEmpleado As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents dgvUsuarios As Global.System.Web.UI.WebControls.GridView
 End Class

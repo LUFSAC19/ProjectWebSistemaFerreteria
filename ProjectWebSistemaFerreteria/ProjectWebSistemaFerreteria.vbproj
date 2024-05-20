@@ -46,6 +46,14 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="prjCapaDatos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\prjCapaDatos.dll</HintPath>
+    </Reference>
+    <Reference Include="prjCapaNegocio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\prjCapaNegocio.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -93,6 +101,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Empleado.aspx" />
+    <Content Include="Cliente.aspx" />
+    <Content Include="Usuario.aspx" />
+    <Content Include="TipoCliente.aspx" />
+    <Content Include="TipoProducto.aspx" />
+    <Content Include="TipoEmpleado.aspx" />
+    <Content Include="Producto.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Imagenes\2639882_password_icon.png" />
     <Content Include="Imagenes\7023958_password_account_security_reset_safety_icon.png" />
@@ -143,6 +157,7 @@
     <Content Include="Imagenes\ventaQuitar.png" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config" />
+    <Content Include="CambiarContraseña.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Empleado.aspx.designer.vb">
@@ -150,6 +165,48 @@
     </Compile>
     <Compile Include="Empleado.aspx.vb">
       <DependentUpon>Empleado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Cliente.aspx.designer.vb">
+      <DependentUpon>Cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente.aspx.vb">
+      <DependentUpon>Cliente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Usuario.aspx.designer.vb">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.aspx.vb">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TipoCliente.aspx.designer.vb">
+      <DependentUpon>TipoCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TipoCliente.aspx.vb">
+      <DependentUpon>TipoCliente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TipoProducto.aspx.designer.vb">
+      <DependentUpon>TipoProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TipoProducto.aspx.vb">
+      <DependentUpon>TipoProducto.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TipoEmpleado.aspx.designer.vb">
+      <DependentUpon>TipoEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TipoEmpleado.aspx.vb">
+      <DependentUpon>TipoEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Producto.aspx.designer.vb">
+      <DependentUpon>Producto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Producto.aspx.vb">
+      <DependentUpon>Producto.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">
@@ -187,6 +244,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="CambiarContraseña.aspx.designer.vb">
+      <DependentUpon>CambiarContraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CambiarContraseña.aspx.vb">
+      <DependentUpon>CambiarContraseña.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

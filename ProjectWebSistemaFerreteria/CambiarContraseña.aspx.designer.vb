@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Login
+Partial Public Class WebForm1
 
     '''<summary>
     '''Control form1.
@@ -57,4 +57,40 @@ Partial Public Class Login
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control Label1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control TextBox1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control Button1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control btn1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btn1 As Global.System.Web.UI.WebControls.Button
 End Class

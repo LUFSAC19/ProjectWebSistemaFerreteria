@@ -7,48 +7,123 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-IG9QW8w1/F/uU8pdrOhR8GP1Iyfmswh3rADN0Z9RcKjrJhHOm5zjx5e+wCXsR9yGxFfy9aGWcZCbfx8jOupNdA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .main-content {
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            padding-bottom: 50px; /* Ajuste para evitar que el contenido se solape con el pie de página */
+        }
+
+        .header-buttons {
+            margin-bottom: 20px;
+        }
+
+        .menu-collapse {
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: 5px;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        .submenu-link {
+            color: #212529;
+        }
+
+            .submenu-link:hover {
+                color: #007bff;
+            }
+
+        #title {
+            background-color: rgb(34, 48, 62);
+        }
+
+        .header-buttons {
+            background-color: rgb(52, 73, 94);
+        }
+
+        .btn-danger {
+            background-repeat: no-repeat;
+            background-position: left;
+            padding-left: 40px; /* Ajusta el espacio para la imagen */
+        }
+
+        .btn-success {
+            background-image: url('Imagenes/aperturar2.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            padding-left: 40px; /* Ajusta el espacio para la imagen */
+        }
+
+        .btn-info {
+            background-image: url('Imagenes/icons8-descuento-48.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            padding-left: 40px; /* Ajusta el espacio para la imagen */
+        }
+    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="main-content">
-            <header class="bg-primary text-white text-center py-2 mb-3">
-                SISTEMA FERRETERIA
-                
+            <header class="text-white" id="title">
+                <h1 class="mb-0">Sistema Ferreteria</h1>
             </header>
-            <div class="header-buttons text-center mb-3">
-                <asp:Button ID="btnSalir" runat="server" Text="Salir" CssClass="btn btn-danger mx-2" />
-                <asp:Button ID="btnCerrar" runat="server" Text="Cerrar" CssClass="btn btn-secondary mx-2" />
-                <asp:Button ID="btnAperturar" runat="server" Text="Aperturar" CssClass="btn btn-success mx-2" />
-                <asp:Button ID="btnVenta" runat="server" Text="Venta" CssClass="btn btn-info mx-2" />
+            <div class="header-buttons d-flex p-3">
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                    <i class="fas fa-bars"></i>Menú
+                </button>
+                <asp:Button ID="btnSalir" runat="server" Text="Salir" CssClass="btn btn-danger border border-light mx-2 position-relative" />
+                <asp:Button ID="btnCerrar" runat="server" Text="Cerrar" CssClass="btn btn-secondary border border-light mx-2 position-relative" />
+                <asp:Button ID="btnAperturar" runat="server" Text="Aperturar" CssClass="btn btn-success border border-light mx-2 position-relative" />
+                <asp:Button ID="btnVenta" runat="server" Text="Venta" CssClass="btn btn-info border border-light mx-2 position-relative" />
             </div>
-            <section class="container mt-4 ms-0">
-                <div class="row">
-                    <div class="col-3">
-                        <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#menuCollapse" aria-expanded="false" aria-controls="menuCollapse">
-                            <i class="fas fa-bars"></i>
-                        </button>
-                        <div class="collapse" id="menuCollapse">
+            <section>
+                <div class="col-3">
+
+                    <div class="offcanvas collapse" id="offcanvasMenu">
+                        <div class="menu-collapse">
                             <div class="bg-light p-4">
                                 <ul class="list-unstyled">
-                                    <li><a href="CerrarSesion.aspx">Cerrar Sesión</a></li>
-                                    <li><a href="Empleado.aspx">Empleado</a></li>
-                                    <li><a href="TipoEmpleado.aspx">Tipo Empleado</a></li>
-                                    <li><a href="Cliente.aspx">Cliente</a></li>
-                                    <li><a href="Caja.aspx">Caja</a></li>
-                                    <li><a href="Usuario.aspx">Usuario</a></li>
-                                    <li><a href="Venta.aspx">Venta</a></li>
+                                    <li>
+                                        <a href="#" class="submenu-link">Sistema <i class="fas fa-caret-down"></i></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="#" class="submenu-link">Cerrar Sesión</a></li>
+                                            <li><a href="#" class="submenu-link">Iniciar Sesión</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="submenu-link">Mantenimiento <i class="fas fa-caret-down"></i></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="Empleado.aspx" class="submenu-link">Empleado <i class="fas fa-caret-down"></i></a></li>
+                                            <li><a href="TipoEmpleado.aspx" class="submenu-link">Tipo Empleado</a></li>
+                                            <li><a href="usuario.aspx" class="submenu-link">Usuario</a></li>
+                                            <li><a href="#" class="submenu-link">Cliente</a></li>
+                                            <li><a href="TipoCliente.aspx" class="submenu-link">Tipo Cliente</a></li>
+                                            <li><a href="#" class="submenu-link">Producto</a></li>
+                                            <li><a href="TipoProducto.aspx" class="submenu-link">Tipo Producto</a></li>
+                                            <li><a href="#" class="submenu-link">Cajero</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="submenu-link">Operación <i class="fas fa-caret-down"></i></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="Venta.aspx" class="submenu-link">Venta</a></li>
+                                            <li><a href="#" class="submenu-link">Aperturar Caja</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-9">
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                        </asp:ContentPlaceHolder>
-                    </div>
                 </div>
+                <div class="col-9">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
             </section>
         </div>
 

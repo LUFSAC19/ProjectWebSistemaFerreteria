@@ -1,6 +1,11 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Login.aspx.vb" Inherits="ProjectWebSistemaFerreteria.Login" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="CambiarContraseña.aspx.vb" Inherits="ProjectWebSistemaFerreteria.WebForm1" %>
 
 <!DOCTYPE html>
+<script runat="server">
+    Protected Sub btnIngresar(sender As Object, e As EventArgs)
+        Response.Redirect("Login.aspx")
+    End Sub
+</script>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -16,6 +21,7 @@
             padding-left: 32px;
             /* Mantén el color de fondo del botón */
         }
+
         #title {
             background-color: rgb(52, 73, 94);
         }
@@ -29,16 +35,15 @@
                     <div class="row no-gutters">
                         <div class="col-md-4 d-flex align-items-center justify-content-center">
                             <img src="Imagenes/login.png" alt="Alternate Text" class="card-img" />
-                            
                         </div>
                         <div class="col-md-8">
-                  
-                                <h3 class="card-title mt-0 text-center text-white p-3 mb-0" id ="title">Inicio de Sesión</h3>
+
+                            <h3 class="card-title mt-0 text-center text-white p-3 mb-0" id="title">Cambiar Contraseña</h3>
                             <div class="card-body m-0">
-        
+
                                 <form id="form1" runat="server">
                                     <div class="form-group">
-                                        <asp:Label runat="server" Text="USUARIO:" CssClass="form-label" ID="Label3"></asp:Label>
+                                        <asp:Label runat="server" Text="DNI:" CssClass="form-label" ID="Label3"></asp:Label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">
@@ -49,7 +54,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <asp:Label runat="server" Text="PASSWORD:" CssClass="form-label" ID="Label2"></asp:Label>
+                                        <asp:Label runat="server" Text="Contraseña:" CssClass="form-label" ID="Label2"></asp:Label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">
@@ -60,12 +65,19 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <asp:LinkButton href="CambiarContraseña.aspx" runat="server">Olvidé mi contraseña</asp:LinkButton>
-                                        
+                                        <asp:Label runat="server" Text="Confirmar Contraseña:" CssClass="form-label" ID="Label1"></asp:Label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <img src="Imagenes/contraseña_login.png" alt="Password Icon" />
+                                                </span>
+                                            </div>
+                                            <asp:TextBox runat="server" TextMode="Password" CssClass="form-control" ID="TextBox1"></asp:TextBox>
+                                        </div>
                                     </div>
-                                    <div class="form-group">&nbsp;</div>
                                     <div class="form-group text-center">
-                                        <asp:Button runat="server" Text="INGRESAR" OnClick="Unnamed2_Click1" CssClass="btn btn-warning-with-icon"></asp:Button>
+                                        <asp:Button runat="server" Text="Cancelar" CssClass="btn btn-warning-with-icon" OnClick="btnIngresar" ID="Button1"></asp:Button>
+                                        <asp:Button runat="server" Text="Guardar" CssClass="btn btn-warning-with-icon" OnClick="btnIngresar" ID="btn1"></asp:Button>
                                     </div>
                                 </form>
                             </div>

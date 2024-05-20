@@ -1,7 +1,6 @@
-﻿<%@ Page Title="" Language="VB" AutoEventWireup="false" MasterPageFile="~/MDIPrincipal.Master" CodeBehind="Empleado.aspx.vb" Inherits="ProjectWebSistemaFerreteria.Formulario_web1" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/MDIPrincipal.Master" CodeBehind="Usuario.aspx.vb" Inherits="ProjectWebSistemaFerreteria.Formulario_web15" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <style>
         .btnGuardar {
             background-image: url('Imagenes/nuevo.png'); /* Ruta de la imagen */
@@ -11,8 +10,7 @@
             padding-left: 25px;
             /* Mantén el color de fondo del botón */
         }
-
-        .btnModificar {
+        .btnModificar{
             background-image: url('Imagenes/modificar.png'); /* Ruta de la imagen */
             background-repeat: no-repeat;
             background-position: center left; /* Alinea la imagen a la izquierda del botón */
@@ -20,8 +18,7 @@
             padding-left: 25px;
             /* Mantén el color de fondo del botón */
         }
-
-        .btnEliminar {
+        .btnEliminar{
             background-image: url('Imagenes/eliminar.png'); /* Ruta de la imagen */
             background-repeat: no-repeat;
             background-position: center left; /* Alinea la imagen a la izquierda del botón */
@@ -29,8 +26,7 @@
             padding-left: 25px;
             /* Mantén el color de fondo del botón */
         }
-
-        .btnDarBaja {
+        .btnDarBaja{
             background-image: url('Imagenes/darBaja.png'); /* Ruta de la imagen */
             background-repeat: no-repeat;
             background-position: center left; /* Alinea la imagen a la izquierda del botón */
@@ -38,88 +34,56 @@
             padding-left: 25px;
             /* Mantén el color de fondo del botón */
         }
-
         .btnLimpiar {
             background-image: url('Imagenes/limpiar.png'); /* Ruta de la imagen */
             background-repeat: no-repeat;
             background-position: center left; /* Alinea la imagen a la izquierda del botón */
-
+            
             padding-left: 25px;
             /* Mantén el color de fondo del botón */
         }
-
-        .btnSalir {
+        .btnSalir{
             background-image: url('Imagenes/salir.png'); /* Ruta de la imagen */
             background-repeat: no-repeat;
             background-position: center left; /* Alinea la imagen a la izquierda del botón */
-
+            
             padding-left: 25px;
             /* Mantén el color de fondo del botón */
         }
     </style>
 </asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="mb-4">Empleado</h2>
+                <h2 class="mb-4">Usuario</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-md-8">
                 <asp:Panel runat="server">
                     <div class="form-group">
-                        <label for="txtCodigo">Código:</label>
-                        <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control"></asp:TextBox>
-                        <!-- Aquí puedes agregar el botón de búsqueda si lo necesitas -->
+                        <label for="txtID">ID:</label>
+                        <asp:TextBox ID="txtId" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                     <div class="form-group">
-                        <label for="txtDni">DNI:</label>
+                        <label for="txtNombre">Nombre:</label>
+                        <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPassword">Password:</label>
+                        <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtDni">Dni:</label>
                         <asp:TextBox ID="txtDni" runat="server" CssClass="form-control"></asp:TextBox>
                     </div>
                     <div class="form-group">
-                        <label for="cbxTipo">Tipo:</label>
-                        <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control">
-                            <asp:ListItem Text="Gerente" Value="Gerente"></asp:ListItem>
-                            <asp:ListItem Text="Cajero" Value="Cajero"></asp:ListItem>
-                        </asp:DropDownList>
-                    </div>
-                    <div class="form-group">
-                        <label for="txtNombres">Nombres:</label>
-                        <asp:TextBox ID="txtNombres" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <label for="txtApellidos">Apellidos:</label>
-                        <asp:TextBox ID="txtApellidos" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <label for="dtpFecha">Fecha Nac.:</label>
-                        <asp:TextBox ID="dtpFecha" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <label for="txtCelular">Celular:</label>
-                        <asp:TextBox ID="txtCelular" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <label for="cbxSexo">Sexo:</label>
+                        <label for="cbxVigencia">Vigencia:</label>
                         <asp:DropDownList ID="cbxSexo" runat="server" CssClass="form-control">
-                            <asp:ListItem Text="Masculino" Value="Masculino"></asp:ListItem>
-                            <asp:ListItem Text="Femenino" Value="Femenino"></asp:ListItem>
+                            <asp:ListItem Text="Vigente" Value="Vigente"></asp:ListItem>
+                            <asp:ListItem Text="No vigente" Value="NoVigente"></asp:ListItem>
                         </asp:DropDownList>
-                    </div>
-                    <div class="form-group">
-                        <label for="txtEmail">Email:</label>
-                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <label for="txtDireccion">Dirección:</label>
-                        <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="form-group form-check">
-                        <label clss="form-check-label" for="chbxVigente">Vigente: </label>
-                        <asp:CheckBox ID="chbxVigente" runat="server" Text="(Vigente)" CssClass="form-check-input" />
-
                     </div>
                 </asp:Panel>
             </div>
@@ -150,7 +114,7 @@
         </div>
         <div class="row mt-4">
             <div class="col-12">
-                <asp:GridView ID="dgvEmpleado" runat="server" CssClass="table table-striped table-bordered">
+                <asp:GridView ID="dgvUsuarios" runat="server" CssClass="table table-striped table-bordered">
                     <Columns>
                     </Columns>
                 </asp:GridView>
