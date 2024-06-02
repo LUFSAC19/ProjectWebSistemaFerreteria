@@ -59,15 +59,6 @@ Partial Public Class Formulario_web12
     Protected WithEvents btnEliminar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control btnDarBaja.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents btnDarBaja As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''Control btnLimpiar.
     '''</summary>
     '''<remarks>

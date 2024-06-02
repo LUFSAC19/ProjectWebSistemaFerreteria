@@ -1,25 +1,126 @@
-﻿Public Class Formulario_web15
-    Inherits System.Web.UI.Page
+﻿Imports System.Windows.Forms
+Imports prjCapaNegocio
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        GridView()
+Public Class Formulario_web15
+    Inherits System.Web.UI.Page
+    Dim objUsu As New clsUsuario
+
+    Public Sub habiliarBotones(est As Boolean)
+        btnBuscar.Enabled = est
+        btnDarBaja.Enabled = est
+        btnEliminar.Enabled = est
+        btnModificar.Enabled = est
+        btnLimpiar.Enabled = est
+
+    End Sub
+    Public Sub limpiarControles()
+        txtId.Text = ""
+        txtNombre.Text = ""
+        txtPassword.Text = ""
+        txtDni.Text = ""
+        cbxVigencia.SelectedIndex = 0
     End Sub
 
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        If btnGuardar.Text = "Nuevo" Then
+            btnGuardar.Text = "Guardar"
+            limpiarControles()
+            txtId.Text = objUsu.generarIdUsuario()
+            habiliarBotones(False)
+
+        Else
+            btnGuardar.Text = "Nuevo"
+            Try
+                objUsu.registrarUsuario(CInt(txtId.Text), txtNombre.Text, txtPassword.Text, txtDni.Text, IIf(cbxVigencia.SelectedIndex = 0, 1, 0))
+                GridView()
+                limpiarControles()
+                habiliarBotones(True)
+            Catch ex As Exception
+                MessageBox.Show("Error al registrar", "SCP", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        End If
+    End Sub
     Private Sub GridView()
-        Dim dt As New DataTable()
-        dt.Columns.Add("ID")
-        dt.Columns.Add("Nombre")
-        dt.Columns.Add("Password")
-        dt.Columns.Add("Dni")
-        dt.Columns.Add("Vigencia")
-
-        ' Agregar filas de datos manualmente
-        dt.Rows.Add("1", "Juan Perez", "password123", "12345678", "Vigente")
-        dt.Rows.Add("2", "Maria Lopez", "password456", "87654321", "No vigente")
-        dt.Rows.Add("3", "Carlos Sanchez", "password789", "11223344", "Vigente")
-
-        ' Enlazar el DataTable al GridView
-        dgvUsuarios.DataSource = dt
+        dgvUsuarios.DataSource = objUsu.listarUsuario()
         dgvUsuarios.DataBind()
     End Sub
+
+    Private Sub Formulario_web15_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If Not IsPostBack Then
+            GridView()
+            limpiarControles()
+
+        End If
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Dim dtUsu As New DataTable
+
+        Try
+            dtUsu = objUsu.buscarUsuario(CInt(txtId.Text))
+            If dtUsu.Rows.Count > 0 Then
+                txtId.Text = dtUsu.Rows(0).Item(0)
+                txtNombre.Text = dtUsu.Rows(0).Item(1)
+                txtPassword.Text = dtUsu.Rows(0).Item(2)
+                txtDni.Text = dtUsu.Rows(0).Item(3)
+                cbxVigencia.SelectedIndex = IIf(dtUsu.Rows(0).Item(4), cbxVigencia.SelectedIndex = 0, cbxVigencia.SelectedIndex = 1)
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "SCP", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Protected Sub btnLimpiar_Click(sender As Object, e As EventArgs)
+        limpiarControles()
+    End Sub
+
+    Protected Sub btnModificar_Click1(sender As Object, e As EventArgs)
+        Try
+            Dim response
+            response = MessageBox.Show("Esta seguro de modificar el usuario: " & txtNombre.Text, "SCP", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+
+            If response = vbOK Then
+                objUsu.modificarUsuario(CInt(txtId.Text), txtNombre.Text, txtPassword.Text, txtDni.Text, IIf(cbxVigencia.SelectedIndex = 0, True, False))
+                GridView()
+                limpiarControles()
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "SCP", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Protected Sub btnEliminar_Click1(sender As Object, e As EventArgs)
+        Try
+            Dim response
+            response = MessageBox.Show("Esta seguro de eliminar el usuario: " & txtNombre.Text, "SCP", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+
+            If response = vbOK Then
+                objUsu.eliminarUsuario(CInt(txtId.Text))
+                GridView()
+                limpiarControles()
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "SCP", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Protected Sub btnDarBaja_Click1(sender As Object, e As EventArgs)
+        Try
+            Dim response
+            response = MessageBox.Show("Esta seguro de dar de baja el usuario: " & txtNombre.Text, "SCP", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+
+            If response = vbOK Then
+                objUsu.darBajaUsuario(CInt(txtId.Text))
+                GridView()
+                limpiarControles()
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "SCP", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+
 End Class

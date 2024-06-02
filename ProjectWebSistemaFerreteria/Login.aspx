@@ -6,78 +6,34 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Login</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <style>
-        .btn-warning-with-icon {
-            background-image: url('Imagenes/ingresar_login.png'); /* Ruta de la imagen */
-            background-repeat: no-repeat;
-            background-position: center left; /* Alinea la imagen a la izquierda del botón */
-            background-color: #ffc107;
-            padding-left: 32px;
-            /* Mantén el color de fondo del botón */
-        }
-        #title {
-            background-color: rgb(52, 73, 94);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 d-flex align-items-center justify-content-center">
-                            <img src="Imagenes/login.png" alt="Alternate Text" class="card-img" />
-                            
-                        </div>
-                        <div class="col-md-8">
-                  
-                                <h3 class="card-title mt-0 text-center text-white p-3 mb-0" id ="title">Inicio de Sesión</h3>
-                            <div class="card-body m-0">
-        
-                                <form id="form1" runat="server">
-                                    <div class="form-group">
-                                        <asp:Label runat="server" Text="USUARIO:" CssClass="form-label" ID="Label3"></asp:Label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">
-                                                    <img src="Imagenes/usuario_login.png" alt="User Icon" />
-                                                </span>
-                                            </div>
-                                            <asp:TextBox runat="server" CssClass="form-control" ID="txtUsuario"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <asp:Label runat="server" Text="PASSWORD:" CssClass="form-label" ID="Label2"></asp:Label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">
-                                                    <img src="Imagenes/contraseña_login.png" alt="Password Icon" />
-                                                </span>
-                                            </div>
-                                            <asp:TextBox runat="server" TextMode="Password" CssClass="form-control" ID="txtPassword"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <asp:LinkButton href="CambiarContraseña.aspx" runat="server">Olvidé mi contraseña</asp:LinkButton>
-                                        
-                                    </div>
-                                    <div class="form-group">&nbsp;</div>
-                                    <div class="form-group text-center">
-                                        <asp:Button runat="server" Text="INGRESAR" OnClick="Unnamed2_Click1" CssClass="btn btn-warning-with-icon"></asp:Button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <link href="login.css" rel="stylesheet" />
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+    <div class="contenedor-formularios">
+        <input type="checkbox" name="check-slider" id="check-slider"/>
+        <form class="contenedor-login" runat="server">
+            <h1>INICIO DE SESIÓN</h1>
+            <div class="contenedor-input">
+                <img src="https://img.icons8.com/material-sharp/48/user.png"
+                    alt="imagen"/>
+                <asp:TextBox runat="server" type="text" name="usuario" id="txtUser"></asp:TextBox>
+                
+                <label for="usuario">Usuario</label>
+            </div>
+            <div class="contenedor-input">
+                <img src="https://img.icons8.com/metro/26/password.png"
+                    alt="imagen"/>
+                <asp:TextBox runat="server" type="password" name="contraseña" id="txtPassword"></asp:TextBox>
+                
+                <label for="contraseña">Contraseña</label>
+            </div>
+            <asp:LinkButton ID="lblOlvidePassword" for="check-slider" runat="server" class="link-olvide-contraseña" OnClick="lblOlvidePassword_Click">Olvidé mi contraseña</asp:LinkButton>
+
+            <asp:Button CssClass="button" ID="btnLogin" runat="server" Text="Acceder al sistema" OnClick="btnLogin_Click1"></asp:Button>
+        </form>
+    </div>
 </body>
 </html>

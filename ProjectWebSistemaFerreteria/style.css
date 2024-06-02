@@ -1,0 +1,56 @@
+﻿.btn{
+    border : 2px solid gray;
+}
+.btnGuardar {
+    background-image: url('Imagenes/nuevo.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: center left; /* Alinea la imagen a la izquierda del botón */
+    background-color: #ffc107;
+    padding-left: 25px;
+    /* Mantén el color de fondo del botón */
+}
+
+.btnModificar {
+    background-image: url('Imagenes/modificar.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: center left; /* Alinea la imagen a la izquierda del botón */
+    background-color: #ffc107;
+    padding-left: 25px;
+    /* Mantén el color de fondo del botón */
+}
+
+.btnEliminar {
+    background-image: url('Imagenes/eliminar.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: center left; /* Alinea la imagen a la izquierda del botón */
+    background-color: #ffc107;
+    padding-left: 25px;
+    /* Mantén el color de fondo del botón */
+}
+
+.btnDarBaja {
+    background-image: url('Imagenes/darBaja.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: center left; /* Alinea la imagen a la izquierda del botón */
+    background-color: #ffc107;
+    padding-left: 25px;
+    /* Mantén el color de fondo del botón */
+}
+
+.btnLimpiar {
+    background-image: url('Imagenes/limpiar.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: center left; /* Alinea la imagen a la izquierda del botón */
+
+    padding-left: 25px;
+    /* Mantén el color de fondo del botón */
+}
+
+.btnSalir {
+    background-image: url('Imagenes/salir.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: center left; /* Alinea la imagen a la izquierda del botón */
+
+    padding-left: 25px;
+    /* Mantén el color de fondo del botón */
+}

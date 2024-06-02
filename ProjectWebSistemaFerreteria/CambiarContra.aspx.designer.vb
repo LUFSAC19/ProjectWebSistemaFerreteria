@@ -11,41 +11,50 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Login
+Partial Public Class CambiarContra
 
     '''<summary>
-    '''Control txtUser.
+    '''Control txtDNI.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtUser As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtDNI As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtPassword.
+    '''Control txtNuevaContraseña.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtNuevaContraseña As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control lblOlvidePassword.
+    '''Control txtConfirmarContraseña.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblOlvidePassword As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents txtConfirmarContraseña As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control btnLogin.
+    '''Control btnCambiar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnLogin As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnCambiar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control btnRegresar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnRegresar As Global.System.Web.UI.WebControls.LinkButton
 End Class
