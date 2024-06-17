@@ -11,59 +11,50 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Principal
+Partial Public Class ReporteCantidadVentas
 
     '''<summary>
-    '''Control head.
+    '''Control eleccion_check.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents head As Global.System.Web.UI.WebControls.ContentPlaceHolder
+    Protected WithEvents eleccion_check As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
-    '''Control lblNombres.
+    '''Control input_anio.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblNombres As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents input_anio As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control lblCargo.
+    '''Control btn_filtrar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblCargo As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents btn_filtrar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control btnLogout.
+    '''Control HiddenField1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnLogout As Global.System.Web.UI.HtmlControls.HtmlButton
+    Protected WithEvents HiddenField1 As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
-    '''Control form1.
+    '''Control tiempo_grafico.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
-    '''<summary>
-    '''Control ContentPlaceHolder1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
+    Protected WithEvents tiempo_grafico As Global.System.Web.UI.WebControls.HiddenField
 End Class

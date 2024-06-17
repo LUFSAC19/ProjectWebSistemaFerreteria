@@ -11,59 +11,86 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Principal
+Partial Public Class reporteVentas
 
     '''<summary>
-    '''Control head.
+    '''Control ScriptManager1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents head As Global.System.Web.UI.WebControls.ContentPlaceHolder
+    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
 
     '''<summary>
-    '''Control lblNombres.
+    '''Control UpdatePanel1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblNombres As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
 
     '''<summary>
-    '''Control lblCargo.
+    '''Control dgVentas.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblCargo As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents dgVentas As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Control btnLogout.
+    '''Control codVenta.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnLogout As Global.System.Web.UI.HtmlControls.HtmlButton
+    Protected WithEvents codVenta As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control form1.
+    '''Control cliente.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents cliente As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control ContentPlaceHolder1.
+    '''Control vendedor.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
+    Protected WithEvents vendedor As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control fecha.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents fecha As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control montoTotal.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents montoTotal As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control dgDetalle.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents dgDetalle As Global.System.Web.UI.WebControls.GridView
 End Class

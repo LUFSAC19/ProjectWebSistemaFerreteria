@@ -50,13 +50,11 @@
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
-    <Reference Include="prjCapaDatos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\prjCapaDatos.dll</HintPath>
+    <Reference Include="prjCapaDatos">
+      <HintPath>..\..\..\..\..\..\Downloads\pruebaEscr\prjCapaDatos\bin\Debug\prjCapaDatos.dll</HintPath>
     </Reference>
-    <Reference Include="prjCapaNegocio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\prjCapaNegocio.dll</HintPath>
+    <Reference Include="prjCapaNegocio">
+      <HintPath>..\..\..\..\..\..\Downloads\pruebaEscr\prjCapaNegocio\bin\Debug\prjCapaNegocio.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -133,18 +131,38 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CambiarContra.aspx" />
-    <Content Include="Empleado.aspx" />
-    <Content Include="Cliente.aspx" />
-    <Content Include="login.css" />
-    <Content Include="maestra.js" />
-    <Content Include="Producto.aspx" />
-    <Content Include="maestra.css" />
-    <Content Include="style.css" />
-    <Content Include="Usuario.aspx" />
-    <Content Include="TipoCliente.aspx" />
-    <Content Include="TipoProducto.aspx" />
-    <Content Include="TipoEmpleado.aspx" />
+    <Content Include="CSS\AperturarCaja.css" />
+    <Content Include="CSS\BusquedaAvanzadaCliente.css" />
+    <Content Include="CSS\ReporteCantidadVentas.css" />
+    <Content Include="CSS\ReporteProductosMasVendidos.css" />
+    <Content Include="CSS\ReporteProductosMenosVendidos.css" />
+    <Content Include="JS\BusquedaAvanzadaCliente.js" />
+    <Content Include="CSS\BusquedaAvanzadaProducto.css" />
+    <Content Include="JS\BusquedaAvanzadaProducto.js" />
+    <Content Include="CSS\Caja.css" />
+    <Content Include="JS\ReporteCantidadVentas.js" />
+    <Content Include="JS\ReporteProductosMasVendidos.js" />
+    <Content Include="JS\ReporteProductosMenosVendidos.js" />
+    <Content Include="Templates\CambiarContra.aspx" />
+    <Content Include="Templates\Empleado.aspx" />
+    <Content Include="Templates\Cliente.aspx" />
+    <Content Include="Templates\Caja.aspx" />
+    <Content Include="Templates\AperturarCaja.aspx" />
+    <Content Include="CSS\login.css" />
+    <Content Include="JS\maestra.js" />
+    <Content Include="Templates\ModalBusquedaCliente.aspx" />
+    <Content Include="Templates\ModalBusquedaProducto.aspx" />
+    <Content Include="Templates\Producto.aspx" />
+    <Content Include="CSS\maestra.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="Templates\ReporteCantidadVentas.aspx" />
+    <Content Include="Templates\ReporteProductosMasVendidos.aspx" />
+    <Content Include="Templates\ReporteProductosMenosVendidos.aspx" />
+    <Content Include="Templates\reporteVentas.aspx" />
+    <Content Include="Templates\Usuario.aspx" />
+    <Content Include="Templates\TipoCliente.aspx" />
+    <Content Include="Templates\TipoProducto.aspx" />
+    <Content Include="Templates\TipoEmpleado.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Imagenes\2639882_password_icon.png" />
     <Content Include="Imagenes\7023958_password_account_security_reset_safety_icon.png" />
@@ -193,73 +211,130 @@
     <Content Include="Imagenes\ventaIconoProducto.png" />
     <Content Include="Imagenes\ventaProducto.png" />
     <Content Include="Imagenes\ventaQuitar.png" />
-    <Content Include="Login.aspx" />
+    <Content Include="Templates\Login.aspx" />
+    <Content Include="Templates\Venta.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CambiarContra.aspx.designer.vb">
+    <Compile Include="Templates\CambiarContra.aspx.designer.vb">
       <DependentUpon>CambiarContra.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CambiarContra.aspx.vb">
+    <Compile Include="Templates\CambiarContra.aspx.vb">
       <DependentUpon>CambiarContra.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Empleado.aspx.designer.vb">
+    <Compile Include="Templates\Empleado.aspx.designer.vb">
       <DependentUpon>Empleado.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Empleado.aspx.vb">
+    <Compile Include="Templates\Empleado.aspx.vb">
       <DependentUpon>Empleado.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Cliente.aspx.designer.vb">
+    <Compile Include="Templates\Cliente.aspx.designer.vb">
       <DependentUpon>Cliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cliente.aspx.vb">
+    <Compile Include="Templates\Cliente.aspx.vb">
       <DependentUpon>Cliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Producto.aspx.designer.vb">
+    <Compile Include="Templates\Caja.aspx.designer.vb">
+      <DependentUpon>Caja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Caja.aspx.vb">
+      <DependentUpon>Caja.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Templates\AperturarCaja.aspx.designer.vb">
+      <DependentUpon>AperturarCaja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\AperturarCaja.aspx.vb">
+      <DependentUpon>AperturarCaja.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Templates\ModalBusquedaCliente.aspx.designer.vb">
+      <DependentUpon>ModalBusquedaCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ModalBusquedaCliente.aspx.vb">
+      <DependentUpon>ModalBusquedaCliente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Templates\ModalBusquedaProducto.aspx.designer.vb">
+      <DependentUpon>ModalBusquedaProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ModalBusquedaProducto.aspx.vb">
+      <DependentUpon>ModalBusquedaProducto.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Producto.aspx.designer.vb">
       <DependentUpon>Producto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Producto.aspx.vb">
+    <Compile Include="Templates\Producto.aspx.vb">
       <DependentUpon>Producto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Usuario.aspx.designer.vb">
+    <Compile Include="Templates\ReporteCantidadVentas.aspx.designer.vb">
+      <DependentUpon>ReporteCantidadVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ReporteCantidadVentas.aspx.vb">
+      <DependentUpon>ReporteCantidadVentas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Templates\ReporteProductosMasVendidos.aspx.designer.vb">
+      <DependentUpon>ReporteProductosMasVendidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ReporteProductosMasVendidos.aspx.vb">
+      <DependentUpon>ReporteProductosMasVendidos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Templates\ReporteProductosMenosVendidos.aspx.designer.vb">
+      <DependentUpon>ReporteProductosMenosVendidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ReporteProductosMenosVendidos.aspx.vb">
+      <DependentUpon>ReporteProductosMenosVendidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\reporteVentas.aspx.designer.vb">
+      <DependentUpon>reporteVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\reporteVentas.aspx.vb">
+      <DependentUpon>reporteVentas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Usuario.aspx.designer.vb">
       <DependentUpon>Usuario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Usuario.aspx.vb">
+    <Compile Include="Templates\Usuario.aspx.vb">
       <DependentUpon>Usuario.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="TipoCliente.aspx.designer.vb">
+    <Compile Include="Templates\TipoCliente.aspx.designer.vb">
       <DependentUpon>TipoCliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TipoCliente.aspx.vb">
+    <Compile Include="Templates\TipoCliente.aspx.vb">
       <DependentUpon>TipoCliente.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="TipoProducto.aspx.designer.vb">
+    <Compile Include="Templates\TipoProducto.aspx.designer.vb">
       <DependentUpon>TipoProducto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TipoProducto.aspx.vb">
+    <Compile Include="Templates\TipoProducto.aspx.vb">
       <DependentUpon>TipoProducto.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="TipoEmpleado.aspx.designer.vb">
+    <Compile Include="Templates\TipoEmpleado.aspx.designer.vb">
       <DependentUpon>TipoEmpleado.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TipoEmpleado.aspx.vb">
+    <Compile Include="Templates\TipoEmpleado.aspx.vb">
       <DependentUpon>TipoEmpleado.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.designer.vb">
+    <Compile Include="Templates\Login.aspx.designer.vb">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.vb">
+    <Compile Include="Templates\Login.aspx.vb">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -289,6 +364,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Templates\Venta.aspx.designer.vb">
+      <DependentUpon>Venta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Venta.aspx.vb">
+      <DependentUpon>Venta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

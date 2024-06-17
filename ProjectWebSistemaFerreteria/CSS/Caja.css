@@ -1,0 +1,334 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --color-primario: #14213D;
+    --color-secundario: #FCA311;
+    --color-terciario: #0B152A;
+    --color-cuaternario: #000000;
+    --color-texto-botones: #0B152A;
+    --color-fondo-pantalla: #E5E5E5;
+    --color-fondo-elementos: #FFFFFF;
+    --color-borde-elementos: #a5a5a5;
+    --color-borde-tabla: #DADFE3;
+    --tamaño-fuente: 1.02em;
+    --filtro-color-negro: invert(0%) sepia(0%) saturate(17%) hue-rotate(272deg) brightness(90%) contrast(103%);
+    --filtro-color-blanco: invert(100%) sepia(0%) saturate(0%) hue-rotate(43deg) brightness(105%) contrast(101%);
+    --filtro-color-secundario: invert(59%) sepia(90%) saturate(736%) hue-rotate(351deg) brightness(103%) contrast(98%);
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #E4E9F7;
+}
+
+/*----------------------------------------INICIO ESTILOS CONTENEDOR-----------------------------------------------*/
+.contenedor {
+    background-color: var(--color-fondo-elementos);
+    margin-inline: auto;
+    height: calc(100% - 1rem);
+    width: calc(100% - 2rem);
+    padding: clamp(5px,20vw,20px);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 0.1fr 0.6fr 0.3fr;
+    grid-template-columns: 0.3fr 0.45fr;
+    gap: 0.5rem;
+    justify-content: center;
+    align-content: center;
+}
+
+    .contenedor > * {
+        border: 1px solid var(--color-borde-elementos);
+        border-radius: 10px;
+    }
+
+.button {
+    border: 1px solid var(--color-borde-elementos);
+    border-radius: 10px;
+}
+
+    .button:hover {
+        filter: brightness(80%);
+        transition: filter 0.3s ease-out;
+    }
+
+.input[type="text"], input[type="number"] {
+    outline: none;
+    border: 1px solid #a5a5a5;
+    border-radius: 5px;
+    padding: 1px 0 1px 7px;
+}
+
+.input[readonly] {
+    filter: brightness(80%);
+}
+/*----------------------------------------FIN ESTILOS CONTENEDOR-----------------------------------------------*/
+
+
+/*----------------------------------------INICIO ESTILOS TITULO-----------------------------------------------*/
+.contenedor h1 {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    background-color: var(--color-primario);
+    color: white;
+    padding: 1rem;
+    border: none;
+    font-size: 26px;
+}
+/*----------------------------------------FIN ESTILOS TITULO-----------------------------------------------*/
+
+
+/*----------------------------------------INICIO ESTILOS INPUTS-----------------------------------------------*/
+.contenedor-controles {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .contenedor-controles .controles-input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 1rem;
+        & label
+
+{
+    width: 80px;
+    text-align: end;
+    margin-right: 1rem;
+}
+
+& .label {
+    width: 80px;
+    text-align: end;
+    margin-right: 1rem;
+}
+
+& input, & select, .input {
+    width: max(100px, 10rem);
+}
+
+& img {
+    height: 30px;
+}
+
+&:first-child {
+    .button
+
+{
+    width: max(30px,3.5rem);
+    margin: 0 0 0 4px;
+    border-radius: 5px;
+}
+
+.input {
+    width: clamp(50px,80%,100px);
+}
+
+}
+}
+/*----------------------------------------FIN ESTILOS INPUTS-----------------------------------------------*/
+
+/*----------------------------------------INICIO ESTILOS BOTONES-----------------------------------------------*/
+.contenedor-botones {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem;
+    gap: 0.6rem;
+}
+
+    .contenedor-botones .button {
+        flex: 1 1 150px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        color: var(--color-terciario);
+        background-color: var(--color-secundario);
+        font-weight: bold;
+        &:last-child
+
+{
+    background-color: var(--color-fondo-pantalla);
+}
+
+img {
+    height: 42px;
+}
+
+}
+/*----------------------------------------FIN ESTILOS BOTONES-----------------------------------------------*/
+
+
+/*----------------------------------------INICIO ESTILOS TABLA-----------------------------------------------*/
+.contenedor-tabla {
+    grid-row: 2/4;
+    grid-column: 2/3;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    &::-webkit-scrollbar
+
+{
+    display: none;
+}
+
+}
+
+.contenedor-tabla .table {
+    border-collapse: collapse;
+    height: auto;
+    width: 100%;
+    margin-inline: auto;
+}
+
+    .contenedor-tabla .table th, .contenedor-tabla table td {
+        border: 1px solid var(--color-borde-tabla);
+        padding: calc(0.5rem);
+        text-align: center;
+    }
+
+    .contenedor-tabla .table tbody tr {
+        background-color: white;
+        scroll-snap-align: end;
+        &:hover
+
+{
+    filter: brightness(80%);
+    transition: filter 0.3s ease-out;
+}
+
+}
+
+.contenedor-tabla .table tr input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+}
+
+.contenedor-tabla .table thead {
+    background-color: var(--color-primario);
+    color: white;
+    position: sticky;
+    top: 0;
+}
+/*----------------------------------------FIN ESTILOS TABLA-----------------------------------------------*/
+
+/*----------------------------------------INICIO MEDIAQUERYS-----------------------------------------------*/
+@media (max-width:879px) {
+    .contenedor {
+        grid-template-rows: 0.5fr 2fr 3.5fr;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-content: center;
+    }
+
+        .contenedor h1 {
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+
+    .contenedor-controles {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .contenedor-botones {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .contenedor-tabla {
+        grid-row: 3/4;
+        grid-column: 1/3;
+    }
+}
+
+@media (max-width:708px) {
+    .contenedor {
+        grid-template-rows: 0.5fr 2fr 1.8fr 3.5fr;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-content: center;
+    }
+
+        .contenedor h1 {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+    .contenedor-controles {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .contenedor-botones {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .contenedor-tabla {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+}
+
+@media (max-width:462px) {
+    .contenedor-botones button {
+        flex: 1 1 100px;
+    }
+
+    .contenedor-tabla table thead {
+        display: none;
+    }
+
+    .contenedor-tabla table,
+    .contenedor-tabla table tbody,
+    .contenedor-tabla table tr,
+    .contenedor-tabla table td {
+        display: block;
+        width: 100%;
+    }
+
+        .contenedor-tabla table tr {
+            margin-bottom: 30px;
+        }
+
+        .contenedor-tabla table td {
+            text-align: right;
+            padding-left: 50%;
+            position: relative;
+            &::before
+
+{
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+}
+}
+/*----------------------------------------FIN ESTILOS MEDIAQUERYS-----------------------------------------------*/
+

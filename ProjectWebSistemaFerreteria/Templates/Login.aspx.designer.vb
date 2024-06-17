@@ -11,59 +11,59 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Principal
+Partial Public Class Login
 
     '''<summary>
-    '''Control head.
+    '''Control lblMsgUser.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents head As Global.System.Web.UI.WebControls.ContentPlaceHolder
+    Protected WithEvents lblMsgUser As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control lblNombres.
+    '''Control txtUser.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblNombres As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents txtUser As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control lblCargo.
+    '''Control lblPass.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblCargo As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents lblPass As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Control btnLogout.
+    '''Control txtPassword.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnLogout As Global.System.Web.UI.HtmlControls.HtmlButton
+    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control form1.
+    '''Control lblOlvidePassword.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents lblOlvidePassword As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''Control ContentPlaceHolder1.
+    '''Control btnLogin.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
+    Protected WithEvents btnLogin As Global.System.Web.UI.WebControls.Button
 End Class

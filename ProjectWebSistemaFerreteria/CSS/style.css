@@ -1,0 +1,150 @@
+﻿:root {
+    --color-primario: #14213D;
+    --color-secundario: #FCA311;
+    --color-terciario: #0B152A;
+    --color-cuaternario: #000000;
+    --color-texto-botones: #0B152A;
+    --color-fondo-pantalla: #E5E5E5;
+    --color-fondo-elementos: #FFFFFF;
+    --color-borde-elementos: #a5a5a5;
+    --color-borde-tabla: #DADFE3;
+    --tamaño-fuente: 1.02em;
+    --filtro-color-negro: invert(0%) sepia(0%) saturate(17%) hue-rotate(272deg) brightness(90%) contrast(103%);
+    --filtro-color-blanco: invert(100%) sepia(0%) saturate(0%) hue-rotate(43deg) brightness(105%) contrast(101%);
+    --filtro-color-secundario: invert(59%) sepia(90%) saturate(736%) hue-rotate(351deg) brightness(103%) contrast(98%);
+}
+
+.btn {
+    border: 2px solid gray;
+}
+
+.btnGuardar {
+    background-color: #FCA311;
+    background-image: url('../Imagenes/nuevo.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: center left; /* Alinea la imagen a la izquierda del botón */
+    padding-left: 25px;
+    /* Mantén el color de fondo del botón */
+}
+
+.btnModificar {
+    background-image: url('../Imagenes/modificar.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: center left; /* Alinea la imagen a la izquierda del botón */
+    background-color: #FCA311;
+    padding-left: 25px;
+    /* Mantén el color de fondo del botón */
+}
+
+.btnEliminar {
+    background-image: url('../Imagenes/eliminar.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: center left; /* Alinea la imagen a la izquierda del botón */
+    background-color: #FCA311;
+    padding-left: 25px;
+    /* Mantén el color de fondo del botón */
+}
+
+.btnDarBaja {
+    background-image: url('../Imagenes/darBaja.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: center left; /* Alinea la imagen a la izquierda del botón */
+    background-color: #FCA311;
+    padding-left: 25px;
+    /* Mantén el color de fondo del botón */
+}
+
+.btnLimpiar {
+    background-image: url('../Imagenes/limpiar.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: center left; /* Alinea la imagen a la izquierda del botón */
+    background-color: #CCCCCC;
+    padding-left: 25px;
+    /* Mantén el color de fondo del botón */
+}
+
+.btnSalir {
+    background-image: url('../Imagenes/salir.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: center left; /* Alinea la imagen a la izquierda del botón */
+    background-color: #CCCCCC;
+    padding-left: 25px;
+    /* Mantén el color de fondo del botón */
+}
+
+.btnBuscar {
+    background-image: url('../Imagenes/buscar.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: center left; /* Alinea la imagen a la izquierda del botón */
+    background-color: #CCCCCC;
+    padding-left: 25px;
+    /* Mantén el color de fondo del botón */
+}
+
+
+.container h1 {
+    background-color: #14213D;
+    color: white;
+    padding: 1rem;
+    border: none;
+    font-size: 26px;
+    grid-row: 1/2;
+    grid-column: 1/3;
+    text-align: center;
+}
+
+
+.contenedor-tabla {
+    grid-row: 2/4;
+    grid-column: 2/3;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    &::-webkit-scrollbar
+
+{
+    display: none;
+}
+
+}
+
+.contenedor-tabla .table {
+    border-collapse: collapse;
+    height: auto;
+    width: 100%;
+    margin-inline: auto;
+}
+
+    .contenedor-tabla .table th, .contenedor-tabla table td {
+        border: 1px solid var(--color-borde-tabla);
+        padding: calc(0.5rem);
+        text-align: center;
+    }
+
+    .contenedor-tabla .table tbody tr {
+        background-color: white;
+        scroll-snap-align: end;
+        &:hover
+
+{
+    filter: brightness(80%);
+    transition: filter 0.3s ease-out;
+}
+
+}
+
+.contenedor-tabla .table tr input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+}
+
+.contenedor-tabla .table thead {
+    background-color: var(--color-primario);
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.contenedor-principal {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
